@@ -28,7 +28,7 @@ FormHandler.prototype.addSubmitHandler = function (fn) {
             console.log(data);
             fn(data);
             this.reset();
-            this.elements[0].focus();
+          
         })
       };
 FormHandler.prototype.addRangeHandler = function () {
