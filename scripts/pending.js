@@ -30,9 +30,9 @@
         $tdDuration.append(durationString);
         var $tdButton = $('<td></td>')
         var inSeconds = taskData.duration*60;
-        var $startButton = $('<button></button>', {'class': 'btn btn-info', 'type': 'button', 'value': inSeconds, 'data-selector': taskData.task, 'data-timer-handle': 0});
+        var $startButton = $('<button></button>', {'class': 'btn btn-info btn-block', 'type': 'button', 'value': inSeconds, 'data-selector': taskData.task, 'data-timer-handle': 0});
         $startButton.append('Start timer');
-        var $completeButton = $('<button></button>', {'class': 'btn btn-success', 'type': 'button', 'name': taskData.task});
+        var $completeButton = $('<button></button>', {'class': 'btn btn-success btn-block', 'type': 'button', 'name': taskData.task});
         $completeButton.append('Task Completed');
         $tdButton.append($startButton);
         $tdButton.append(" ");
