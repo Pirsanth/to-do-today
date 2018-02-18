@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title >TOdo TOday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body class="container">
+  <header>
+    <h1 class="text-center" style="font-family: Lobster">TOdo TOday</h1>
+  </header>
+
+  <section>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form data-form="form">
+          <h4>Add a task:</h4>
+  <!--        <div class="form-group">
+            <label for="zeit">Time of day:</label>
+            <input type="time" name="time" id="zeit" value="09:00" autofocus class="form-control">
+          </div>  -->
+          <div class="form-group">
+            <label for="task">Name of task:</label>
+            <input type="text" id="task" name="task" value="" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="duration">Expected minutes taken to complete task:</label>
+
+            <input type="range" id="duration" list="tickmarks" class="form-control" value="30" name="duration" data-slider="range" min="1" max="120">
+
+                <datalist id="tickmarks">
+                  <option value="1" label="1"> </option>
+                  <option value="10"> </option>
+                  <option value="20"></option>
+                  <option value="30"></option>
+                  <option value="40"></option>
+                  <option value="50"></option>
+                  <option value="60" label="60"></option>
+                  <option value="70"></option>
+                  <option value="80"></option>
+                  <option value="90"></option>
+                  <option value="100"></option>
+                  <option value="110"></option>
+                  <option value="120" label="120"></option>
+                </datalist>
+                <span data-slider="display">30 minutes</span>
+          </div>
+
+          <label>Please choose the priority of the task:</label>
+          <div class="radio">
+          <label><input type="radio" name="priority" value="normal" checked>Normal</label>
+          </div>
+          <div class="radio">
+          <label><input type="radio" name="priority" value="high">High</label>
+          </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+         <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>Pending tasks:</h4>
+        <table class="table table-hover table-condensed">
+            <thead>
+              <tr>
+                <th>Name of task</th>
+                <th>Alotted time remaining</th>
+              </tr>
+            </thead>
+            <tbody data-pending="list">
+
+            </tbody>
+          </table>
+      <!--  <div class="checkbox" data-coffee-order="checkbox">
+  <label for=""><input type="checkbox" value="chewie@mm.com">Name of task <span>30 minuted remaining</span> <button type="submit" class="btn btn-primary">Submit</button></label>
+        </div>
+        <div class="checkbox" data-coffee-order="checkbox">
+  <label for=""><input type="checkbox" value="chewie@mm.com">Name of task <span>30 minuted remaining</span> <button type="submit" class="btn btn-primary">Submit</button></label>
+</div> -->
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+
+
+            <h4>Completed Tasks:</h4>
+            <ul data-completed="list">
+              <li data-completed="no-tasks">No tasks completed yet</li>
+            </ul>
+
+        <button type="button" class="btn btn-danger pull-right" style="display: none" data-completed="clear">Clear List</button>
+      </div>
+    </div>
+  </section>
+  </body>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+      <script src="scripts/formhandler.js" charset="utf-8"></script>
+      <script src="scripts/pending.js" charset="utf-8"></script>
+      <script src="scripts/completed.js" charset="utf-8"></script>
+      <script src="scripts/main.js" charset="utf-8"></script>
+</html>
