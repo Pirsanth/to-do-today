@@ -16,7 +16,7 @@ function FormHandler(formSelector, rangeSelector, displaySelector) {
       }
 }
 
-//do not forget to pass a fn
+
 FormHandler.prototype.addSubmitHandler = function (fn) {
         console.log('adding a submit handler');
         this.$formElement.on('submit', function (event) {
@@ -27,8 +27,7 @@ FormHandler.prototype.addSubmitHandler = function (fn) {
             })
             console.log(data);
             fn(data);
-            this.reset();
-          
+            $(this).find('[data-slider="display"]').text("30 minutes");          
         })
       };
 FormHandler.prototype.addRangeHandler = function () {
