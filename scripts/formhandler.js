@@ -27,6 +27,7 @@ FormHandler.prototype.addSubmitHandler = function (fn) {
             })
             console.log(data);
             fn(data);
+            this.reset();
             $(this).find('[data-slider="display"]').text("30 minutes");          
         })
       };
